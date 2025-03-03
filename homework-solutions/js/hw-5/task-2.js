@@ -1,3 +1,5 @@
+import { smilePatternResult } from './task-1';
+
 /**
  * Создать строку с числами от 1 до 100.
  * Если число делится на 3 – добавить строку `"число - делится на 3"`.
@@ -17,5 +19,23 @@
  * 100 - делится на 5
  */
 let fizzBuzzResult = '';
+
+for (let i = 1; i <= 100; i++) {
+  if (i !== 100) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      fizzBuzzResult = fizzBuzzResult + `${i} - делится и на 3 и на 5\n`;
+    } else if (i % 3 === 0) {
+      fizzBuzzResult = fizzBuzzResult + `${i} - делится на 3\n`;
+    } else if (i % 5 === 0) {
+      fizzBuzzResult = fizzBuzzResult + `${i} - делится на 5\n`;
+    } else {
+      fizzBuzzResult = fizzBuzzResult + `${i}\n`;
+    }
+  } else {
+    fizzBuzzResult = fizzBuzzResult + `${i} - делится на 5`;
+  }
+}
+
+
 
 export { fizzBuzzResult };
