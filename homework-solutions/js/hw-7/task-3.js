@@ -9,7 +9,21 @@
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  if (isNaN(number)) return false;
+
+  let result = number;
+
+  while (result > 9) {
+      let str = result.toString();
+      let array = str.split('').filter(el => el !== '');
+
+      result = 0;
+      for (let i = 0; i < array.length; i++) {
+          result += +array[i]; 
+      }
+  } 
+  return result;
 }
+console.log(digitalRoot(19));
 
 export { digitalRoot };
