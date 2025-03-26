@@ -5,8 +5,10 @@
   - Например: mergeArrays([1,2], [3,4], [5,6]) // [1,2,3,4,5,6]
   - Решить с использованием Spread operator
 */
-function mergeArrays() {
-  // Ваш код
+console.log(mergeArrays([1,2], [3,4], [5,6]));
+
+function mergeArrays(...arrays) {
+  return [].concat(...arrays);
 }
 /*
   2. Devide by _
@@ -14,8 +16,26 @@ function mergeArrays() {
     - Первое слово должно начинаться с буквы в нижнем регистре, у остальных -  верхнем. 
     - Пример: I am super engineer => i_Am_Super_Engineer
   */
+let sentence = 'I am super engineer';
+console.log(devideBy(sentence));
+
 function devideBy(sentence) {
-  // Ваш код
+  let array = sentence.split(' ').filter(el => el !== '');
+  let result = '';
+
+  for (let i = 0; i < array.length; i++) {
+      if (i === 0) {
+        result += array[i].toLowerCase();
+      } else {
+        result += array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase();
+      }
+
+      if (i < array.length - 1) {
+        result += '_';
+      }
+  }
+
+  return result;
 }
 /*
   3. Фибаначчи
@@ -25,7 +45,19 @@ function devideBy(sentence) {
     - Например fibonacci(8) //21
   */
 function fibonacci(n) {
-  // Ваш код
+  if (n <= 1) return n;
+  let a = 0;
+  let b = 1;
+  
+  for (let i = 2; i <= n; i++) {
+    let result = a + b;
+    a = b;
+    b = result;
+  }
+
+  return b;
 }
+
+console.log(fibonacci(8));
 
 export { mergeArrays, fibonacci, devideBy };
