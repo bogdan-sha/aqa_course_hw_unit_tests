@@ -50,6 +50,11 @@ let applyResult = getInfo.apply(anotherQa, ['Hey']);
 
 function createCounter() {
   let count = 0;
+  return () => {
+    count ++;
+    console.log(`Function was called ${count} times`);
+    return count;
+  }
 }
 
 const functionCallCounter = createCounter();
