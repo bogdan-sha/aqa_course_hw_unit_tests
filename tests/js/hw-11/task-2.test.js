@@ -128,7 +128,7 @@ describe('[JS] - [HW 11] - Task 2', () => {
       const validLastNames = [
         { value: 'Doe', expected: 'Doe' },
         { value: 'Smith', expected: 'Smith' },
-        { value: 'A', expected: 'A' }, // Minimum length
+        { value: 'Al', expected: 'Al' }, // Minimum length
         { value: 'B'.repeat(50), expected: 'B'.repeat(50) }, // Maximum length
       ];
 
