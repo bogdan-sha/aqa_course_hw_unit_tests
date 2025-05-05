@@ -8,9 +8,9 @@
 let num1: number = 42;
 let str: string = 'Hello, TypeScript!';
 let isComplete: boolean = false;
-let numbers: Array<number> = [1, 2, 3, 4, 5];
-let cities: Array<string> = ["Minsk", "Warsaw", "London"];
-let person: {name: string, age: number, city: string} = {
+const numbers: Array<number> = [1, 2, 3, 4, 5];
+const cities: Array<string> = ["Minsk", "Warsaw", "London"];
+const person: {name: string, age: number, city: string} = {
   name: "Alice",
   age: 30,
   city: "Minsk"
