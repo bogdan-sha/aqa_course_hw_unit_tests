@@ -6,8 +6,8 @@
 Пример:
 map([1,2,3,4,5], callback) => [0,2,6,12,20] */
 
-function map<T>(array: T[], callback: (element: T, index: number) => number): number[] {
-    const result: number[] = [];
+function map<T, U>(array: T[], callback: (element: T, index: number) => U): U[] {
+    const result: U[] = [];
 
     for (let i = 0; i < array.length; i++) {
         result.push(callback(array[i], i));
